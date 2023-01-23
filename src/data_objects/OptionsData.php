@@ -10,4 +10,5 @@ class OptionsData extends BaseDataObject {
     public $return_url;
     public $template;
     public $terminal;
+	public $recurring;
 }
