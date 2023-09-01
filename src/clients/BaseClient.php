@@ -71,7 +71,7 @@ abstract class BaseClient {
      * @return array
      */
     protected function getMaskedParams($paramsToMask){
-        array_walk_recursive($paramsToMask, function(&$value, &$key) {
+        array_walk_recursive($paramsToMask, function(&$value, $key) {
             if(in_array($key, array('pan', 'cvv', 'holder', 'expiration_month', 'expiration_year'))){
                 $value = str_repeat('*', strlen($value));
             }
